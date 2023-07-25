@@ -91,7 +91,7 @@ function Menu() {
 
 function Footer() {
   const hour = new Date().getHours();
-  const openHour = 12;
+  const openHour = 10;
   const closeHour = 22;
   const isOpen = hour >= openHour && hour <= closeHour;
 
@@ -101,7 +101,7 @@ function Footer() {
         <Order closeHour={closeHour} openHour={openHour} />
       ) : (
         <p>
-          Sorry we are closed, our hours are from {openHour}:00 until
+          Sorry we are closed, our hours are from {openHour}:00 until{" "}
           {closeHour}:00
         </p>
       )}
