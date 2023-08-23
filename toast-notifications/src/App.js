@@ -1,22 +1,27 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function App() {
   const [toast, setToast] = useState(false);
   const [toastNum, setToastNum] = useState(0);
 
+  useEffect(
+    function () {
+      const id = setInterval(() => {
+        setToast(false);
+      }, 3000);
+      return () => clearInterval(id);
+    },
+    [setToast]
+  );
+
   function handleToast() {
-    setToastNum(toastNum + 1);
-    setToast(true);
-    setTimeout(() => setToast(false), 3000);
+    setToastNum((toastNum) => toastNum + 1);
+    setToast((toast) => true);
   }
   return (
     <div>
       <Button onHandleToast={handleToast} />
-      {toast ? (
-        <div className="toasts">
-          <Toast toastNum={toastNum} />
-        </div>
-      ) : null}
+      {toast ? <Toast toastNum={toastNum} key={toastNum} /> : null}
     </div>
   );
 }
@@ -32,5 +37,9 @@ function Button({ onHandleToast }) {
 }
 
 function Toast({ toastNum }) {
-  return <div className="toast">Toast Message {toastNum}</div>;
+  return (
+    <div className="toasts">
+      <div className="toast">Toast Message {toastNum}</div>
+    </div>
+  );
 }
