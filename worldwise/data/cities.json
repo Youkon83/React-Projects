@@ -1,0 +1,40 @@
+{
+  "cities": [
+    {
+      "cityName": "Midyat",
+      "country": "Turkiye",
+      "emoji": "🇹🇷",
+      "date": "2023-09-04T20:42:05.511Z",
+      "notes": "",
+      "position": {
+        "lat": "37.5609203455732",
+        "lng": "41.22125804428833"
+      },
+      "id": 3
+    },
+    {
+      "cityName": "Washington",
+      "country": "United States of America (the)",
+      "emoji": "🇺🇸",
+      "date": "2023-09-11T19:09:28.849Z",
+      "notes": "",
+      "position": {
+        "lat": "38.77121637244273",
+        "lng": "-76.92626953125001"
+      },
+      "id": 4
+    },
+    {
+      "cityName": "New York City",
+      "country": "United States of America (the)",
+      "emoji": "🇺🇸",
+      "date": "2023-09-12T14:48:05.772Z",
+      "notes": "Note here",
+      "position": {
+        "lat": "40.56389453066509",
+        "lng": "-73.95996093750001"
+      },
+      "id": 5
+    }
+  ]
+}
